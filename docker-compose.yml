@@ -1,0 +1,12 @@
+
+services:
+  zotero:
+    image: zotero_t1:latest
+    container_name: zotero_vnc
+    build: .
+    ports:
+      - "5900:5900"
+    volumes:
+      - zotero_data:/data
+volumes:
+  zotero_data:
